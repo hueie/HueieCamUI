@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -45,7 +46,9 @@ namespace HueieCamUI
 
                 MessageBox.Show("T : " + Grid1.Margin.Top + " B : " + (scHeight - Grid1.Margin.Bottom) + " L : " + Grid1.Margin.Left + " R : " + (scWidth-Grid1.Margin.Right));
 
-                Grid3.Margin = new Thickness { Top = -(Grid3.ActualHeight), Bottom = scHeight };
+                HueieCam.HueieCam.setPosition((int)Grid1.Margin.Top, (int)Grid1.Margin.Bottom, (int)Grid1.Margin.Left, (int)Grid1.Margin.Right);
+                HueieCam.HueieCam.run();
+                //Grid3.Margin = new Thickness { Top = -(Grid3.ActualHeight), Bottom = scHeight };
             }
         }
 
@@ -226,7 +229,6 @@ namespace HueieCamUI
 
 
 
-        bool _isGrid3ShowProg = true;
         void Grid3ME(object sender, RoutedEventArgs e)
         {
             double scWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
@@ -253,5 +255,20 @@ namespace HueieCamUI
         {
         }
 
+    }
+}
+
+
+
+namespace HueieCam
+{
+    public class HueieCam
+    {
+        [DllImport("C:/Users/pioneer/Source/Repos/HueieCamTest/HueieCamTest/{out}/x64/Debug/HueieCamDll.dll", EntryPoint = "?run@HueieCam@1@QEAAXXZ")]
+        extern public static void run();
+        [DllImport("C:/Users/pioneer/Source/Repos/HueieCamTest/HueieCamTest/{out}/x64/Debug/HueieCamDll.dll", EntryPoint = "?test@HueieCam@1@QEAAXXZ")]
+        extern public static void test();
+        [DllImport("C:/Users/pioneer/Source/Repos/HueieCamTest/HueieCamTest/{out}/x64/Debug/HueieCamDll.dll", EntryPoint = "?setPosition@HueieCam@1@QEAAXHHHH@Z", CallingConvention = CallingConvention.ThisCall)]
+        extern public static void setPosition(int t, int b, int l, int r);
     }
 }

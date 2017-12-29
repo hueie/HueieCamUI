@@ -12,3 +12,17 @@ c:\users\pioneer\documents\visual studio 2015\Projects\HueieCamUI\HueieCamUI\obj
 c:\users\pioneer\documents\visual studio 2015\Projects\HueieCamUI\HueieCamUI\obj\Debug\HueieCamUI.csproj.GenerateResource.Cache
 c:\users\pioneer\documents\visual studio 2015\Projects\HueieCamUI\HueieCamUI\obj\Debug\HueieCamUI.exe
 c:\users\pioneer\documents\visual studio 2015\Projects\HueieCamUI\HueieCamUI\obj\Debug\HueieCamUI.pdb
+C:\Users\pioneer\Source\Repos\HueieCamUI\HueieCamUI\HueieCamUI\bin\Debug\HueieCamUI.exe.config
+C:\Users\pioneer\Source\Repos\HueieCamUI\HueieCamUI\HueieCamUI\obj\Debug\HueieCamUI.exe
+C:\Users\pioneer\Source\Repos\HueieCamUI\HueieCamUI\HueieCamUI\obj\Debug\HueieCamUI.pdb
+C:\Users\pioneer\Source\Repos\HueieCamUI\HueieCamUI\HueieCamUI\bin\Debug\HueieCamUI.exe
+C:\Users\pioneer\Source\Repos\HueieCamUI\HueieCamUI\HueieCamUI\bin\Debug\HueieCamUI.pdb
+C:\Users\pioneer\Source\Repos\HueieCamUI\HueieCamUI\HueieCamUI\obj\Debug\HueieCamUI.csprojResolveAssemblyReference.cache
+C:\Users\pioneer\Source\Repos\HueieCamUI\HueieCamUI\HueieCamUI\obj\Debug\MainWindow.g.cs
+C:\Users\pioneer\Source\Repos\HueieCamUI\HueieCamUI\HueieCamUI\obj\Debug\App.g.cs
+C:\Users\pioneer\Source\Repos\HueieCamUI\HueieCamUI\HueieCamUI\obj\Debug\HueieCamUI_MarkupCompile.cache
+C:\Users\pioneer\Source\Repos\HueieCamUI\HueieCamUI\HueieCamUI\obj\Debug\HueieCamUI_MarkupCompile.lref
+C:\Users\pioneer\Source\Repos\HueieCamUI\HueieCamUI\HueieCamUI\obj\Debug\MainWindow.baml
+C:\Users\pioneer\Source\Repos\HueieCamUI\HueieCamUI\HueieCamUI\obj\Debug\HueieCamUI.g.resources
+C:\Users\pioneer\Source\Repos\HueieCamUI\HueieCamUI\HueieCamUI\obj\Debug\HueieCamUI.Properties.Resources.resources
+C:\Users\pioneer\Source\Repos\HueieCamUI\HueieCamUI\HueieCamUI\obj\Debug\HueieCamUI.csproj.GenerateResource.Cache
