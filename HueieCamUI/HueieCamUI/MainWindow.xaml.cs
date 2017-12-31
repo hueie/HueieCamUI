@@ -14,6 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using HueieCam;
+
 namespace HueieCamUI
 {
     /// <summary>
@@ -44,10 +46,18 @@ namespace HueieCamUI
                 double scWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
                 double scHeight = System.Windows.SystemParameters.PrimaryScreenHeight;
 
-                MessageBox.Show("T : " + Grid1.Margin.Top + " B : " + (scHeight - Grid1.Margin.Bottom) + " L : " + Grid1.Margin.Left + " R : " + (scWidth-Grid1.Margin.Right));
+                int t = (int)Grid1.Margin.Top;
+                int b = (int)(scHeight - Grid1.Margin.Bottom);
+                int l = (int)Grid1.Margin.Left;
+                int r = (int)(scWidth - Grid1.Margin.Right);
+                MessageBox.Show("T : " + t + " B : " + b + " L : " + l + " R : " + r);
 
-                HueieCam.HueieCam.setPosition((int)Grid1.Margin.Top, (int)Grid1.Margin.Bottom, (int)Grid1.Margin.Left, (int)Grid1.Margin.Right);
+                IntPtr ptr = new IntPtr();
+                HueieCam.HueieCam.setPosition(ptr, t,b,l,r);
                 HueieCam.HueieCam.run();
+                ptr = IntPtr.Zero;
+
+                MessageBox.Show("!!!Finish!!!");
                 //Grid3.Margin = new Thickness { Top = -(Grid3.ActualHeight), Bottom = scHeight };
             }
         }
@@ -264,11 +274,17 @@ namespace HueieCam
 {
     public class HueieCam
     {
-        [DllImport("C:/Users/pioneer/Source/Repos/HueieCamTest/HueieCamTest/{out}/x64/Debug/HueieCamDll.dll", EntryPoint = "?run@HueieCam@1@QEAAXXZ")]
+        public HueieCam()
+        {
+            ;
+        }
+
+        [DllImport("C:/Users/pioneer/Source/Repos/HueieCamTest/HueieCamTest/{out}/x64/Release/HueieCamDll.dll", EntryPoint = "?run@HueieCam@1@QEAAXXZ")]//, CallingConvention = CallingConvention.ThisCall
         extern public static void run();
-        [DllImport("C:/Users/pioneer/Source/Repos/HueieCamTest/HueieCamTest/{out}/x64/Debug/HueieCamDll.dll", EntryPoint = "?test@HueieCam@1@QEAAXXZ")]
+        [DllImport("C:/Users/pioneer/Source/Repos/HueieCamTest/HueieCamTest/{out}/x64/Release/HueieCamDll.dll", EntryPoint = "?test@HueieCam@1@QEAAXXZ")]
         extern public static void test();
-        [DllImport("C:/Users/pioneer/Source/Repos/HueieCamTest/HueieCamTest/{out}/x64/Debug/HueieCamDll.dll", EntryPoint = "?setPosition@HueieCam@1@QEAAXHHHH@Z", CallingConvention = CallingConvention.ThisCall)]
-        extern public static void setPosition(int t, int b, int l, int r);
+        [DllImport("C:/Users/pioneer/Source/Repos/HueieCamTest/HueieCamTest/{out}/x64/Release/HueieCamDll.dll", EntryPoint = "?setPosition@HueieCam@1@QEAAXPEAV11@HHHH@Z", CallingConvention = CallingConvention.ThisCall)]
+        extern public static void setPosition(IntPtr ptr, int t, int b, int l, int r);
+        
     }
 }
