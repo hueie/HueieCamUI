@@ -283,7 +283,7 @@ namespace HueieCam
         extern public static void run();
         [DllImport("C:/Users/pioneer/Source/Repos/HueieCamTest/HueieCamTest/{out}/x64/Release/HueieCamDll.dll", EntryPoint = "?test@HueieCam@1@QEAAXXZ")]
         extern public static void test();
-        [DllImport("C:/Users/pioneer/Source/Repos/HueieCamTest/HueieCamTest/{out}/x64/Release/HueieCamDll.dll", EntryPoint = "?setPosition@HueieCam@1@QEAAXPEAV11@HHHH@Z", CallingConvention = CallingConvention.ThisCall)]
+        [DllImport("C:/Users/pioneer/Source/Repos/HueieCamTest/HueieCamTest/{out}/x64/Release/HueieCamDll.dll", EntryPoint = "?setPosition@HueieCam@1@QEAAXHHHH@Z", CallingConvention = CallingConvention.ThisCall)]
         extern public static void setPosition(IntPtr ptr, int t, int b, int l, int r);
         
     }
